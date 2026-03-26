@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./styles/landing.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -43,39 +44,47 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
+  /* DentisTech Color Palette */
+  --dentistech-navy: #191964;
+  --dentistech-blue: #004B96;
+  --dentistech-teal: #32C8AF;
+  --dentistech-cyan: #00AFC8;
+  --dentistech-white: #F8F8F8;
+  
+  /* Primary colors */
+  --primary: #004B96;
+  --primary-foreground: #F8F8F8;
+  --sidebar-primary: #004B96;
+  --sidebar-primary-foreground: #F8F8F8;
+  --chart-1: #32C8AF;
+  --chart-2: #00AFC8;
+  --chart-3: #004B96;
+  --chart-4: #191964;
+  --chart-5: #004B96;
+  --radius: 0.5rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  --foreground: #191964;
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: #191964;
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --popover-foreground: #191964;
+  --secondary: #32C8AF;
+  --secondary-foreground: #191964;
+  --muted: #E8E8F0;
+  --muted-foreground: #666666;
+  --accent: #32C8AF;
+  --accent-foreground: #191964;
+  --destructive: #DC2626;
+  --destructive-foreground: #F8F8F8;
+  --border: #E8E8F0;
+  --input: #F8F8F8;
+  --ring: #00AFC8;
+  --sidebar: #F8F8F8;
+  --sidebar-foreground: #191964;
+  --sidebar-accent: #32C8AF;
+  --sidebar-accent-foreground: #191964;
+  --sidebar-border: #E8E8F0;
+  --sidebar-ring: #00AFC8;
 }
 
 .dark {
@@ -119,6 +128,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

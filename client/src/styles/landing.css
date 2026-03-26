@@ -1,0 +1,277 @@
+/* DentisTech Landing Page - Estilos Customizados */
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Aplicar animações aos elementos */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Estilos de botão customizados */
+.btn-primary {
+  background-color: #004B96;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 75, 150, 0.2);
+}
+
+.btn-secondary {
+  background-color: #32C8AF;
+  color: #191964;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #1fa89a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(50, 200, 175, 0.2);
+}
+
+/* Estilos de input */
+input[type="text"],
+input[type="tel"],
+select {
+  border-color: #E8E8F0;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+  border-color: #00AFC8;
+  box-shadow: 0 0 0 3px rgba(0, 175, 200, 0.1);
+}
+
+/* Estilos de card */
+.card-elevated {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card-elevated:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Estilos de divider */
+.divider-subtle {
+  background-color: #E8E8F0;
+  height: 1px;
+}
+
+/* Estilos de seção */
+.section-spacing {
+  padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding: 2rem 0;
+  }
+}
+
+/* Estilos de tipografia */
+.text-display-1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #191964;
+}
+
+.text-display-2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #191964;
+}
+
+.text-heading-1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #191964;
+}
+
+.text-heading-2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #191964;
+}
+
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.text-microcopy {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #999999;
+}
+
+/* Estilos de ícone */
+.icon-teal {
+  color: #32C8AF;
+}
+
+.icon-cyan {
+  color: #00AFC8;
+}
+
+.icon-blue {
+  color: #004B96;
+}
+
+.icon-navy {
+  color: #191964;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .text-display-1 {
+    font-size: 2rem;
+  }
+
+  .text-display-2 {
+    font-size: 1.5rem;
+  }
+
+  .text-heading-1 {
+    font-size: 1.25rem;
+  }
+
+  .text-heading-2 {
+    font-size: 1.125rem;
+  }
+
+  .text-body-lg {
+    font-size: 1rem;
+  }
+}
+
+/* Efeito de hover em cards com diferenciais */
+.differential-card {
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.differential-card:hover {
+  background-color: #F8F8F8;
+  transform: translateX(4px);
+}
+
+/* Estilos de sucesso */
+.success-state {
+  background-color: #F0F9F7;
+  border-color: #32C8AF;
+}
+
+/* Estilos de header sticky */
+header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos de imagem com efeito */
+img {
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Estilos de formulário */
+.form-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #191964;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.875rem;
+}
+
+.form-helper {
+  font-size: 0.75rem;
+  color: #999999;
+  margin-top: 0.5rem;
+}
+
+/* Estilos de microcopy */
+.microcopy-box {
+  background-color: #F8F8F8;
+  border-left: 3px solid #32C8AF;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.microcopy-box p {
+  font-size: 0.75rem;
+  color: #666666;
+  margin: 0.5rem 0;
+}
+
+.microcopy-box p:first-child {
+  margin-top: 0;
+}
+
+.microcopy-box p:last-child {
+  margin-bottom: 0;
+}
