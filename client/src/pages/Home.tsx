@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { CheckCircle2, Users, Zap, Clock } from "lucide-react";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
 /**
