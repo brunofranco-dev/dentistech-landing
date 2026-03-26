@@ -55,9 +55,12 @@ export default function Home() {
     formDataToSend.append("city", formData.city);
 
     await fetch("https://formspree.io/f/mqegakvd", {
-      method: "POST",
-      body: formDataToSend,
-    });
+  method: "POST",
+  headers: {
+    "Accept": "application/json"
+  },
+  body: formDataToSend,
+});
 
     setSubmitted(true);
     toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
