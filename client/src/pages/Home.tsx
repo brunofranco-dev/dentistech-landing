@@ -63,6 +63,14 @@ export default function Home() {
 
     setSubmitted(true);
     toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
+    if (response.ok) {
+  setSubmitted(true);
+  toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
+
+  setTimeout(() => {
+    window.location.href = "https://wa.me/5534996848841";
+  }, 1500);
+}
 
   } catch (error) {
     console.error(error);
@@ -70,7 +78,9 @@ export default function Home() {
   } finally {
     setLoading(false);
   }
+    
 };
+  
 
   return (
     <div className="min-h-screen bg-white" style={{ backgroundColor: "#F8F8F8" }}>
