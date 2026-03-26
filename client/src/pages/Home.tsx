@@ -39,9 +39,7 @@ export default function Home() {
     }));
   };
 
-
-
-  const handleSubmit = async (e: React.FormEvent) => {
+ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setLoading(true);
 
@@ -53,24 +51,24 @@ export default function Home() {
     formDataToSend.append("specialty", formData.specialty);
     formDataToSend.append("city", formData.city);
 
-    await fetch("https://formspree.io/f/mqegakvd", {
-  method: "POST",
-  headers: {
-    "Accept": "application/json"
-  },
-  body: formDataToSend,
-});
+    const response = await fetch("https://formspree.io/f/mqegakvd", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+      },
+      body: formDataToSend,
+    });
 
-    setSubmitted(true);
-    toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
     if (response.ok) {
-  setSubmitted(true);
-  toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
+      setSubmitted(true);
+      toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
 
-  setTimeout(() => {
-    window.location.href = "https://wa.me/5534996848841";
-  }, 1500);
-}
+      setTimeout(() => {
+        window.location.href = "https://wa.me/5534996848841";
+      }, 1500);
+    } else {
+      toast.error("Erro ao enviar. Tente novamente.");
+    }
 
   } catch (error) {
     console.error(error);
@@ -78,7 +76,6 @@ export default function Home() {
   } finally {
     setLoading(false);
   }
-    
 };
   
 
