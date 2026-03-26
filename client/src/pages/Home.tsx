@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { CheckCircle2, Users, Zap, Clock } from "lucide-react";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 /**
  * DentisTech Landing Page - Captura de Leads
@@ -18,6 +20,7 @@ interface FormData {
 }
 
 export default function Home() {
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     whatsapp: "",
@@ -37,16 +40,22 @@ export default function Home() {
     }));
   };
 
+  const createLeadMutation = trpc.leads.create.useMutation();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simular envio do formulário
-    setTimeout(() => {
+    try {
+      await createLeadMutation.mutateAsync(formData);
       setSubmitted(true);
+      toast.success("Cadastro realizado com sucesso! Você receberá um WhatsApp em breve.");
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      toast.error("Erro ao enviar o formulário. Tente novamente.");
+    } finally {
       setLoading(false);
-      console.log("Form submitted:", formData);
-    }, 1000);
+    }
   };
 
   return (
