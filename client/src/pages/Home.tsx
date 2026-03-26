@@ -60,12 +60,16 @@ export default function Home() {
     });
 
     if (response.ok) {
-      setSubmitted(true);
-      toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
+  setSubmitted(true);
+  toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
 
-      setTimeout(() => {
-        window.location.href = `https://wa.me/5534996848841?text=Olá, sou ${formData.name}, sou ${formData.specialty} e quero acesso antecipado à DentisTech.`;
-    } else {
+  const message = `Olá, sou ${formData.name}, sou ${formData.specialty} e quero acesso ao beta da DentisTech.`;
+  const encodedMessage = encodeURIComponent(message);
+
+  setTimeout(() => {
+    window.location.href = `https://wa.me/5534996848841?text=${encodedMessage}`;
+  }, 2000);
+} else {
       toast.error("Erro ao enviar. Tente novamente.");
     }
 
