@@ -64,8 +64,7 @@ export default function Home() {
       toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
 
       setTimeout(() => {
-        window.location.href = "https://wa.me/5534996848841";
-      }, 1500);
+        window.location.href = `https://wa.me/5534996848841?text=Olá, sou ${formData.name}, sou ${formData.specialty} e quero acesso antecipado à DentisTech.`;
     } else {
       toast.error("Erro ao enviar. Tente novamente.");
     }
