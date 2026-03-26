@@ -40,23 +40,35 @@ export default function Home() {
     }));
   };
 
-  const createLeadMutation = trpc.leads.create.useMutation();
+
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      await createLeadMutation.mutateAsync(formData);
-      setSubmitted(true);
-      toast.success("Cadastro realizado com sucesso! Você receberá um WhatsApp em breve.");
-    } catch (error) {
-      console.error("Erro ao enviar formulário:", error);
-      toast.error("Erro ao enviar o formulário. Tente novamente.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    const formDataToSend = new FormData();
+
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("whatsapp", formData.whatsapp);
+    formDataToSend.append("specialty", formData.specialty);
+    formDataToSend.append("city", formData.city);
+
+    await fetch("https://formspree.io/f/mqegakvd", {
+      method: "POST",
+      body: formDataToSend,
+    });
+
+    setSubmitted(true);
+    toast.success("Cadastro realizado! Te chamaremos no WhatsApp.");
+
+  } catch (error) {
+    console.error(error);
+    toast.error("Erro ao enviar. Tente novamente.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-white" style={{ backgroundColor: "#F8F8F8" }}>
