@@ -542,15 +542,11 @@ export default function Home() {
                   className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 text-sm"
                   style={{ "--tw-ring-color": "#00AFC8" } as any}
                 >
-                  <option value="">Selecione sua especialidade</option>
-                  <option value="geral">Clínico Geral</option>
-                  <option value="ortodontia">Ortodontia</option>
-                  <option value="implantologia">Implantologia</option>
-                  <option value="endodontia">Endodontia</option>
-                  <option value="periodontia">Periodontia</option>
-                  <option value="protese">Prótese</option>
-                  <option value="cirurgia">Cirurgia Oral</option>
-                  <option value="outra">Outra</option>
+                  <option value="">Selecione uma opção</option>
+                  <option value="Dono(a) de clínica">Dono(a) de Clínica</option>
+                  <option value="Dentista">Dentista</option>
+                  <option value="Técnico">Técnico</option>
+                  <option value="outro">Outra</option>
                 </select>
               </div>
 
