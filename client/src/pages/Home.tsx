@@ -85,18 +85,21 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white" style={{ backgroundColor: "#F8F8F8" }}>
       {/* Header */}
-      <header>
-            <div className="flex items-center gap-2">
-              <img
-  src="/LOGO_DENTISTECH.png"
-  alt="DentisTech"
-  className="h-10 w-auto"
-/>
-            </div>
-            <p className="text-sm text-gray-600">Acesso Antecipado - Uberlândia</p>
-          </div>
-        </div>
-      </header>
+      <header className="border-b border-gray-200 py-6 sticky top-0 z-50 bg-white">
+  <div className="container max-w-6xl mx-auto px-4">
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2">
+        <img
+          src="/LOGO_DENTISTECH.png"
+          alt="DentisTech"
+          className="h-10 w-auto"
+        />
+      </div>
+
+      <p className="text-sm text-gray-600">Acesso Antecipado - Uberlândia</p>
+    </div>
+  </div>
+</header>
 
       {/* Hero Section */}
       <section className="py-12 md:py-24 lg:py-32">
