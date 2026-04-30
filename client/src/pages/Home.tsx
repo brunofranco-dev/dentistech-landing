@@ -85,9 +85,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white" style={{ backgroundColor: "#F8F8F8" }}>
       {/* Header */}
-      <header className="border-b border-gray-200 py-6 sticky top-0 z-50 bg-white">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between">
+      <header>
             <div className="flex items-center gap-2">
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg"
@@ -95,11 +93,11 @@ export default function Home() {
               >
                 D
               </div>
-              <span
-                className="font-bold text-xl"
-                style={{ color: "#191964", fontFamily: "Poppins, sans-serif" }}
-              >
-                DentisTech
+              <img
+  src="/logo_dentistehc.png"
+  alt="DentisTech"
+  className="h-10 w-auto"
+/>
               </span>
             </div>
             <p className="text-sm text-gray-600">Acesso Antecipado - Uberlândia</p>
@@ -531,7 +529,7 @@ export default function Home() {
                   className="block text-xs md:text-sm font-semibold mb-2"
                   style={{ color: "#191964" }}
                 >
-                  Sua Especialidade *
+                  Função *
                 </label>
                 <select
                   id="specialty"
