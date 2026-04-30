@@ -167,7 +167,7 @@ export default function Home() {
             {/* Left - Image */}
             <div className="order-2 md:order-1">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031488074/4QG7SWJmPZkPrRrfN3bH6W/dentistech-technician-hero-3wRbqdSDFzsyFj7mNoW9qG.webp"
+                src="https://i.ibb.co/jkcCCtB9/IMG-4261.png"
                 alt="Dr. Cleber, fundador da DentisTech"
                 className="w-full max-w-sm mx-auto rounded-lg"
               />
