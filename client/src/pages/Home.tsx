@@ -94,7 +94,7 @@ export default function Home() {
                 D
               </div>
               <img
-  src="/logo_dentistehc.png"
+  src="/logo_dentistech.png"
   alt="DentisTech"
   className="h-10 w-auto"
 />
